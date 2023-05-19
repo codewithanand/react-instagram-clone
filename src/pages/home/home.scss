@@ -4,9 +4,8 @@
     @include themify($themes){
         background-color: themed("bg");
         color: themed("textColor");
-        height: 100vh;
-        width: 100vw;
         flex: 1;
+        height: 100vh;
         padding: 50px 20px 0;
         display: flex;
         flex-direction: column;

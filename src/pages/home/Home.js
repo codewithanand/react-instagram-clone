@@ -8,8 +8,7 @@ import Rightbar from '../../components/rightbar/Rightbar'
 const Home = () => {
   return (
     <div className="home">
-      {/* <Stories /> */}
-      <Feed />
+        <Feed />
     </div>
   )
 }

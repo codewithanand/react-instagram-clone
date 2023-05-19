@@ -7,6 +7,7 @@ const Profile = () => {
     const [openReels, setOpenReels] = useState(false)
     const [openTags, setOpenTags] = useState(false)
     const [openSaved, setOpenSaved] = useState(false)
+    const [openEditProfile, setOpenEditProfile] = useState(false)
 
     const handlePostsTabs = () => {
         setOpenPosts(true)
@@ -35,10 +36,24 @@ const Profile = () => {
 
     return (
         <div className='profile'>
+            {
+                openEditProfile &&
+                <div className="editProfile">
+                    <input type="text" placeholder='Full Name' />
+                    <input type="text" placeholder='username' />
+                    <input type="text" placeholder='Phone Number' />
+                    <textarea placeholder='Bio' rows={5}></textarea>
+                    <input type="file" />
+                    <div className="actionBtns">
+                        <button onClick={() => setOpenEditProfile(false)}>Cancel</button>
+                        <button>Confirm Changes</button>
+                    </div>
+                </div>
+            }
             <div className="profileHeader">
                 <img src="" alt="" />
                 <div className="profileInfo">
-                    <div className="username"><Link to="/profile/1">artistic_aanand</Link><button>Edit Profile</button></div>
+                    <div className="username"><Link to="/profile/1">artistic_aanand</Link><button onClick={() => setOpenEditProfile(!openEditProfile)}>Edit Profile</button></div>
                     <div className="relationshipCounts">
                         <div className="postsCount">0 posts</div>
                         <div className="followersCount">0 followers</div>
