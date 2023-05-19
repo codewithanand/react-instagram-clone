@@ -1,0 +1,75 @@
+@import "../../style.scss";
+
+.search{
+    @include themify($themes){
+        background-color: themed("bg");
+        color: themed("textColor");
+        width: 400px;
+        padding: 50px 0;
+        border-right: 1px solid themed("border");
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 250px;
+        border-radius: 0 10px 10px 0;
+        z-index: 999;
+        .searchHeader{
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            border-bottom: 1px solid themed("border");
+            h1{
+                margin-bottom: 40px;
+            }
+            input{
+                background-color: themed("bgSoft");
+                color: themed("textColorSoft");
+                border: none;
+                font-size: 16px;
+                padding: 10px;
+                border-radius: 5px;
+                outline: none;
+            }
+        }
+        .searchMain{
+            padding: 20px;
+            height: 100vh;
+            overflow-y: scroll;
+            &::-webkit-scrollbar{
+                display: none;
+            }
+            h3{
+                font-weight: 500;
+                margin-bottom: 20px;
+            }
+            .searchResults{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                .searchProfileBtn{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    cursor: pointer;
+                    img{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                    }
+                    .searchProfileDetails{
+                        display: flex;
+                        flex-direction: column;
+                        .searchProfileUsername{
+                            font-weight: bold;
+                        }
+                        .searchProfileName{
+                            color: themed("textColorSoft");
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

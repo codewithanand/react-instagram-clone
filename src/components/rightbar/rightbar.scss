@@ -1,0 +1,111 @@
+@import "../../style.scss";
+
+.rightbar{
+    @include themify($themes){
+        background-color: themed("bg");
+        color: themed("textColor");
+        width: 350px;
+        padding: 50px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: 100vh;
+        .userProfileBtn{
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            img{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+            .userProfileDetails{
+                display: flex;
+                flex-direction: column;
+                .userProfileName{
+                    font-size: small;
+                    color: themed("textColorSoft");
+                }
+                .userProfileUsername{
+                    font-weight: bold;
+                }
+            }
+        }
+        .suggestedSection{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            .suggestedHeader{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 10px;
+                h2{
+                    font-size: small;
+                    color: themed("textColorSoft");
+                }
+                .seeAllSuggestion{
+                    font-size: small;
+                    cursor: pointer;
+                    text-decoration: none;
+                    color: inherit;
+                }  
+            }
+            .suggProfile{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 10px;
+                .suggProfileBtn{
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    img{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                    }
+                    .suggProfileDetails{
+                        display: flex;
+                        flex-direction: column;
+                        .suggProfileName{
+                            font-size: small;
+                            color: themed("textColorSoft");
+                        }
+                        .suggProfileUsername{
+                            font-size: small;
+                            font-weight: bold;
+                        }
+                    }
+                }
+                .followBtn{
+                    border: none;
+                    background: transparent;
+                    color: blue;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+            }
+        }
+        .footer{
+            color: themed("textColorSoft");
+            display: flex;
+            flex-direction: column;
+            border-top: 1px solid themed("border");
+            .footerQuickLinks{
+                a{
+                    font-size: small;
+                    cursor: pointer;
+                    text-decoration: none;
+                    color: inherit;
+                }
+            }
+            .footerCopyRight{
+                font-size: small;
+            }
+        }
+    }
+}

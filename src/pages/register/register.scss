@@ -1,0 +1,58 @@
+.register{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    .registerContainer{
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 20px;
+        border: 1px solid lightgray;
+        h1{
+            margin-bottom: 20px;
+        }
+        input{
+            width: 100%;
+            padding: 10px;
+            outline: none;
+        }
+        button{
+            margin-top: 20px;
+            width: 100%;
+            background-color: #0084ff;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            font-weight: bold;
+            padding: 10px;
+            color: white;
+            cursor: pointer;
+        }
+        .separator{
+            width: 100%;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: small;
+            div{
+                flex: 1;
+                border: 1px solid lightgray;
+            }
+        }
+        .forgotPass{
+            font-size: small;
+        }
+    }
+    .loginContainer{
+        width: 300px;
+        padding: 20px;
+        border: 1px solid lightgray;
+    }
+}

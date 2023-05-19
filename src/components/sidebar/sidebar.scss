@@ -1,0 +1,69 @@
+@import "../../style.scss";
+
+.sidebar{
+    @include themify($themes){
+        background-color: themed("bg");
+        color: themed("textColor");
+        width: 250px;
+        padding: 50px 10px;
+        border-right: 1px solid themed("border");
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100vh;
+        position: relative;
+        .logo{
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            a{
+                font-size: 20px;
+                font-weight: bold;
+                text-decoration: none;
+                color: inherit;
+            }
+            *{
+                cursor: pointer;
+            }
+            
+        }
+        .quickIcons{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            .quickIcon{
+                text-decoration: none;
+                color: inherit;
+                padding: 10px;
+                border-radius: 5px;
+                cursor: pointer;
+                user-select: none;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                &:hover{
+                    background-color: themed("bgSoft");
+                }
+                img{
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+            }
+        }
+        .moreAction{
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            &:hover{
+                background-color: themed("bgSoft");
+            }
+        }
+    }
+}

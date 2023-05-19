@@ -1,0 +1,73 @@
+@import "../../style.scss";
+.post{
+    @include themify($themes){
+        background-color: themed("bg");
+        color: themed("textColor");
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid themed("border");
+        .postHeader{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .postDetails{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                img{
+                    width: 30px;
+                    height: 30px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+                .postUserDetail{
+                    display: flex;
+                    flex-direction: column;
+                    .postUserName{
+                        font-weight: bold;
+                        .postTime{
+                            font-weight: 500;
+                            font-size: small;
+                            color: themed("textColorSoft");
+                        }
+                    }
+                    .postLocation{
+                        font-size: small;
+                    }
+                }
+            }
+            .moreIcon{
+                cursor: pointer;
+            }
+        }
+        .postImages{
+            img{
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        .postDots{
+
+        }
+        .postActions{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            *{
+                cursor: pointer;
+            }
+        }
+        .postDesc{
+            .postDescUsername{
+                font-weight: bold;
+                font-size: small;
+            }
+            .postDescDetails{
+                font-size: small;
+            }
+        }
+    }
+}

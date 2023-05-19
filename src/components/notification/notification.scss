@@ -1,0 +1,76 @@
+@import "../../style.scss";
+
+.notification{
+    @include themify($themes){
+        background-color: themed("bg");
+        color: themed("textColor");
+        width: 400px;
+        padding: 20px 0;
+        border-right: 1px solid themed("border");
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 250px;
+        border-radius: 0 10px 10px 0;
+        z-index: 999;
+        .notificationHeader{
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            border-bottom: 1px solid themed("border");
+            
+        }
+        .notificationMain{
+            padding: 20px;
+            height: 100vh;
+            overflow-y: scroll;
+            &::-webkit-scrollbar{
+                display: none;
+            }
+            .postLikeNoti,
+            .postCommentNoti,
+            .commentLikeNoti,
+            .followNoti{
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+                margin-bottom: 10px;
+                .likerProfilePic{
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+                .notiDesc{
+                    flex: 1;
+                    .notiUserName{
+                        font-weight: bold;
+                    }
+                    .notiTime{
+                        margin-left: 10px;
+                        font-size: small;
+                        color: themed("textColorSoft");
+                    }
+                }
+                .sourcePostImg{
+                    width: 50px;
+                    height: 50px;
+                    object-fit: cover;
+                    border-radius: 3px;
+                }
+                button{
+                    display: inline-block;
+                    background-color: #0084ff;
+                    border: none;
+                    outline: none;
+                    font-weight: bold;
+                    padding: 5px 10px;
+                    color: white;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
